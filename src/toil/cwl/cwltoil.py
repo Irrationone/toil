@@ -392,7 +392,7 @@ def toilStageFiles(file_store, cwljob, outdir, index, existing, export,
     jobfiles = []  # type: List[Dict[Text, Any]]
     collectFilesAndDirs(cwljob, jobfiles)
     pm = ToilPathMapper(
-        jobfiles, "", outdir, separateDirs=False, stage_listing=True)
+        jobfiles, "", outdir, separateDirs=True, stage_listing=True)
     for f, p in pm.items():
         if not p.staged:
             continue
