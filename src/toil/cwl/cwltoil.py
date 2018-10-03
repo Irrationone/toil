@@ -1037,6 +1037,10 @@ def main(args=None, stdout=sys.stdout):
         " CommandLineTools", metavar=("VAR1 VAR2"), default=("PATH",),
         dest="preserve_environment")
     parser.add_argument(
+        "--strict-memory-limit", action="store_true", help="Run cwltool "
+        "with strict memory limits."
+    )
+    parser.add_argument(
         "--destBucket", type=str,
         help="Specify a cloud bucket endpoint for output files.")
     parser.add_argument(
