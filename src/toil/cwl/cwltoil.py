@@ -554,7 +554,7 @@ class CWLJob(Job):
         runtime_context = self.runtime_context.copy()
         runtime_context.basedir = os.getcwd()
         runtime_context.outdir = outdir
-        runtime_context.tmp_outdir_prefix = file_store.getLocalTempDir() #tmp_outdir_prefix
+        runtime_context.tmp_outdir_prefix = tmp_outdir_prefix
         runtime_context.tmpdir_prefix = file_store.getLocalTempDir()
         runtime_context.make_fs_access = functools.partial(
             ToilFsAccess, file_store=file_store)
